@@ -34,14 +34,7 @@ public class GameTest {
     assertTrue(newGame.getPlayer1().getHand().contains(cardTwo) && newGame.getPlayer1().getHand().contains(cardFour));
   }
 
-  // @Test
-  // public void a_aifjae(){
-  //   Game newGame = new Game();
-  //   Deck newDeck = new Deck();
-  //   newDeck.makeCards();
-  //   newDeck.shuffle();
-  //   assertEquals(newDeck.getCards().get(0).name(), newGame.getDeck().getCards().get(0).name());
-  // }
+
 
 }
 

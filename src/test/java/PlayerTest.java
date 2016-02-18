@@ -19,4 +19,15 @@ public class PlayerTest {
     assertEquals(true, testPlayer.legalGuess("Ace"));
   }
 
+  @Test
+  public void checkForBook_checksPlayerHandForBook() {
+    Player testPlayer = new Player();
+    Card testCard = new Card("Spades", "Ace");
+    Card testCard2 = new Card("Diamonds", "Ace");
+    Card testCard4 = new Card("Hearts", "Ace");
+    Card testCard3 = new Card("Clubs", "Ace");
+    testPlayer.checkForBook();
+    assertEquals(0, testPlayer.getHand().size());
+  }
+
 }

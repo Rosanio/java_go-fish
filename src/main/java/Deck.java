@@ -23,6 +23,13 @@ public class Deck {
   public void shuffle() {
     Collections.shuffle(cards);
   }
+
+  public Card deal(){
+    Card dealtCard = cards.get(0);
+    cards.remove(dealtCard);
+    return dealtCard;
+  }
+
 }
 
 

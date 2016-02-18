@@ -34,6 +34,14 @@ public class DeckTest {
     assertEquals("King of Diamonds", kingOfDiamonds.name());
   }
 
+  @Test
+  public void deal_givesPlayerRandomCardAndRemovesFromDeck(){
+    Deck testDeck = new Deck();
+    testDeck.makeCards();
+    testDeck.deal();
+    assertEquals(testDeck.getCards().size(), 51);
+  }
+
   // @Test
   // public void shuffle_deckContainsRandomlyOrderedCards_notAceOfSpades() {
   //   Deck testDeck = new Deck();

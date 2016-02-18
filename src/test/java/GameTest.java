@@ -34,7 +34,12 @@ public class GameTest {
     assertTrue(newGame.getPlayer1().getHand().contains(cardTwo) && newGame.getPlayer1().getHand().contains(cardFour));
   }
 
-
+  @Test
+  public void goFish_switchesCurrentPlayerIfWrongGuess(){
+    Game newGame = new Game();
+    newGame.goFish("7");
+    assertEquals(newGame.getCurrentPlayer(), newGame.getPlayer2());
+  }
 
 }
 

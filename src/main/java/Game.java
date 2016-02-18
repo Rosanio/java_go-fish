@@ -30,6 +30,14 @@ public class Game {
     return mPlayer2;
   }
 
+  public Player getCurrentPlayer(){
+    return mCurrentPlayer;
+  }
+
+  public Player getNotCurrentPlayer(){
+    return mNotCurrentPlayer;
+  }
+
   public void dealHand(Player player) {
     for(Integer i = 1; i <= 7; i++) {
       Card tempCard = mGameDeck.deal();
@@ -72,30 +80,12 @@ public class Game {
     return result;
   }
 
+  public void goFish(String guess){
+    Card fishCard = mGameDeck.deal();
+    mCurrentPlayer.getHand().add(fishCard);
+    if (!fishCard.getValue().equals(guess)){
+      this.switchTurns();
+    }
+  }
+
 }
-
-
-
-
-
-
-// public String findMatch(String guess){
-//   Integer handSize = mCurrentPlayer.getHand().size();
-//   String result = "";
-//   if (mCurrentPlayer.legalGuess(guess)){
-//     for (Card card : mNotCurrentPlayer.getHand()){
-//       if (card.getValue().equals(guess)){
-//         mCurrentPlayer.getHand().add(card);
-//         mNotCurrentPlayer.getHand().remove(card);
-//       }
-//     }
-//     if(mCurrentPlayer.getHand().size() == handSize) {
-//       result = "Go Fish";
-//     } else {
-//       result = "Guess Again";
-//     }
-//   } else {
-//     result = "Not a legal Guess";
-//   }
-//   return result;
-// }

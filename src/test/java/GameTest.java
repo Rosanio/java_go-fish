@@ -5,6 +5,13 @@ import java.util.ArrayList;
 
 public class GameTest {
 
+  @Test
+  public void game_createsInstanceOfGame_true(){
+    Game newGame = new Game();
+    assertEquals(true, newGame instanceof Game);
+  }
+
+
 }
 
 

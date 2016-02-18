@@ -10,6 +10,26 @@ public class Game {
     mGameDeck = new Deck();
     mPlayer1 = new Player();
     mPlayer2 = new Player();
+    mGameDeck.makeCards();
+  }
+
+  public Deck getDeck() {
+    return mGameDeck;
+  }
+
+  public Player getPlayer1() {
+    return mPlayer1;
+  }
+
+  public Player getPlayer2() {
+    return mPlayer2;
+  }
+
+  public void dealHand(Player player) {
+    for(Integer i = 1; i <= 7; i++) {
+      Card tempCard = mGameDeck.deal();
+      player.getHand().add(tempCard);
+    }
   }
 
 }

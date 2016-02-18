@@ -12,11 +12,12 @@ public class GameTest {
   }
 
 
-  // @Test
-  // public void dealHand_givesPlayerRandomCardFromDeck(){
-  //   Game newGame = new Game();
-  //   assertEquals()
-  // }
+  @Test
+  public void dealHand_givesPlayerRandomCardFromDeck(){
+    Game newGame = new Game();
+    newGame.dealHand(newGame.getPlayer1());
+    assertEquals(7, newGame.getPlayer1().getHand().size());
+  }
 
 }
 

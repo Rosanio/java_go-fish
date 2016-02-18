@@ -24,3 +24,6 @@ public class Deck {
     Collections.shuffle(cards);
   }
 }
+
+
+//Add draw method to remove card from ArrayList and return card

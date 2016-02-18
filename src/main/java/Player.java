@@ -10,4 +10,13 @@ public class Player {
   public ArrayList<Card> getHand() {
     return mHand;
   }
+
+  public boolean legalGuess(String guess){
+    for (Card card : mHand){
+      if (card.getValue().equals(guess)){
+        return true;
+      }
+    }
+    return false;
+  }
 }

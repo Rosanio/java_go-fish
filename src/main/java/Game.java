@@ -11,6 +11,7 @@ public class Game {
     mPlayer1 = new Player();
     mPlayer2 = new Player();
     mGameDeck.makeCards();
+    mGameDeck.shuffle();
   }
 
   public Deck getDeck() {

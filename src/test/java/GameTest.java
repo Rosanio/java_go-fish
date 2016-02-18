@@ -19,6 +19,17 @@ public class GameTest {
     assertEquals(7, newGame.getPlayer1().getHand().size());
   }
 
+
+
+  // @Test
+  // public void a_aifjae(){
+  //   Game newGame = new Game();
+  //   Deck newDeck = new Deck();
+  //   newDeck.makeCards();
+  //   newDeck.shuffle();
+  //   assertEquals(newDeck.getCards().get(0).name(), newGame.getDeck().getCards().get(0).name());
+  // }
+
 }
 
 

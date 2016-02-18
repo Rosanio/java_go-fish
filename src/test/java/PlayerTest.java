@@ -10,4 +10,20 @@ public class PlayerTest {
     Player newPlayer = new Player();
     assertEquals(true, newPlayer instanceof Player);
   }
+
+  @Test
+  public void legalGuess_comparesGuessToPlayersHandToProceed(){
+    Player testPlayer = new Player();
+    Card testCard = new Card("Spades", "Ace");
+    testPlayer.getHand().add(testCard);
+    assertEquals(true, testPlayer.legalGuess("Ace"));
+  }
+
+  // @Test
+  // public void guessCard_comparesUserGuessToHands(){
+  //   Game newGame = new Game();
+  //   assertEquals()
+  // }
+
+
 }

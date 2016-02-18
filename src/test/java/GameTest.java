@@ -19,7 +19,20 @@ public class GameTest {
     assertEquals(7, newGame.getPlayer1().getHand().size());
   }
 
-
+  @Test
+  public void findMatch_takesMatchingCardGuessFromOppositePlayer(){
+    Game newGame = new Game();
+    Card cardOne = new Card("Hearts", "9");
+    Card cardThree = new Card("Hearts", "8");
+    Card cardFour = new Card("Spades", "9");
+    Card cardTwo = new Card("Clubs", "9");
+    newGame.getPlayer1().getHand().add(cardOne);
+    newGame.getPlayer2().getHand().add(cardTwo);
+    newGame.getPlayer2().getHand().add(cardThree);
+    newGame.getPlayer2().getHand().add(cardFour);
+    newGame.findMatch("9");
+    assertTrue(newGame.getPlayer1().getHand().contains(cardTwo) && newGame.getPlayer1().getHand().contains(cardFour));
+  }
 
   // @Test
   // public void a_aifjae(){

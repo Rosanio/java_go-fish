@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DeckTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-02-18T18:31:10" hostname="epicodus-68.local" time="0.001">
+<testsuite name="DeckTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-02-18T19:59:52" hostname="epicodus-68.local" time="0.001">
   <properties/>
   <testcase name="getCards_deckContains52UniqueCards_kingOfDiamonds" classname="DeckTest" time="0.0"/>
   <testcase name="getCards_initializesWith52Cards_52" classname="DeckTest" time="0.0"/>

@@ -19,11 +19,4 @@ public class PlayerTest {
     assertEquals(true, testPlayer.legalGuess("Ace"));
   }
 
-  // @Test
-  // public void guessCard_comparesUserGuessToHands(){
-  //   Game newGame = new Game();
-  //   assertEquals()
-  // }
-
-
 }

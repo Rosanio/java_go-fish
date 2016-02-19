@@ -4,7 +4,7 @@ public class Player {
   private static final String[] SUITS = {"Spades", "Clubs", "Hearts", "Diamonds"};
   private static final String[] VALUES = {"Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"};
 
-  private static ArrayList<Card> mHand;
+  private ArrayList<Card> mHand;
   private Integer mScore;
 
   public Player() {

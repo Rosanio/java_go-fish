@@ -11,6 +11,8 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import static org.fluentlenium.core.filter.FilterConstructor.*;
+
 public class AppTest extends FluentTest {
   public WebDriver webDriver = new HtmlUnitDriver();
   public WebDriver getDefaultDriver() {
@@ -24,5 +26,12 @@ public class AppTest extends FluentTest {
   public void rootTest() {
       goTo("http://localhost:4567/");
       assertThat(pageSource()).contains("Ready to Play?");
+  }
+
+  @Test
+  public void playerOne() {
+      goTo("http://localhost:4567/");
+      click("a", withText("Click to begin"));
+      assertThat(pageSource()).contains("Guess a card:");
   }
 }

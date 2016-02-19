@@ -31,7 +31,7 @@ public class GameTest {
     newGame.getPlayer2().getHand().add(cardThree);
     newGame.getPlayer2().getHand().add(cardFour);
     newGame.findMatch("9");
-    assertTrue(newGame.getPlayer1().getHand().contains(cardTwo) && newGame.getPlayer1().getHand().contains(cardFour));
+    assertEquals(false, newGame.getPlayer1().getHand().contains(cardThree));
   }
 
   @Test

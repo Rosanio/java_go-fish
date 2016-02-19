@@ -1,0 +1,15 @@
+#if($result == "Player 1 Turn")
+  <a href="/playerOneReady">Sorry, it's Player One's Turn</a>
+#end
+#if($result == "Guess Again")
+  <a href="/playerTwoTurn">That's right, guess again!</a>
+#end
+#if($result == "Not a legal Guess")
+  <a href="/playerTwoTurn">Please guess a value of a card in your hand</a>
+#end
+#if($result == "Player 1 Wins")
+  <h1>Player 1 Wins!</h1>
+#end
+#if($result == "Player 2 Wins")
+  <h1>Player 2 Wins!</h1>
+#end

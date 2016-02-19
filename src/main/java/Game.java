@@ -8,6 +8,7 @@ public class Game {
   private Player mCurrentPlayer;
   private Player mNotCurrentPlayer;
 
+
   public Game() {
     mGameDeck = new Deck();
     mPlayer1 = new Player();

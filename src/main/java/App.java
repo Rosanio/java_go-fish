@@ -54,8 +54,8 @@ public class App {
       Game oldGame = request.session().attribute("game");
       String guess = request.queryParams("guess");
       String result = oldGame.findMatch(guess);
-      Integer p1score = oldGame.getPlayer1().getScore();
-      Integer p2score = oldGame.getPlayer2().getScore();
+      Integer p1Score = oldGame.getPlayer1().getScore();
+      Integer p2Score = oldGame.getPlayer2().getScore();
       if(result == "Go Fish") {
         oldGame.goFish(guess);
         if(oldGame.getCurrentPlayer() == oldGame.getPlayer2()) {
@@ -106,8 +106,8 @@ public class App {
       Game oldGame = request.session().attribute("game");
       String guess = request.queryParams("guess");
       String result = oldGame.findMatch(guess);
-      Integer p1score = oldGame.getPlayer1().getScore();
-      Integer p2score = oldGame.getPlayer2().getScore();
+      Integer p1Score = oldGame.getPlayer1().getScore();
+      Integer p2Score = oldGame.getPlayer2().getScore();
       if(result == "Go Fish") {
         oldGame.goFish(guess);
         if(oldGame.getCurrentPlayer() == oldGame.getPlayer1()) {

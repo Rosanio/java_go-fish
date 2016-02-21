@@ -22,11 +22,11 @@ public class App {
 
     get("/", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/newGame.vtl");
       Game newGame = new Game();
       newGame.dealHand(newGame.getPlayer1());
       newGame.dealHand(newGame.getPlayer2());
       request.session().attribute("game", newGame);
+      model.put("template", "templates/NewGame.vtl");
       return new ModelAndView (model, layout);
     }, new VelocityTemplateEngine());
 
@@ -45,7 +45,7 @@ public class App {
       model.put("p1score", p1score);
       model.put("p2score", p2score);
       model.put("playerOne", playerOneCardNames);
-      model.put("template", "templates/playerOneTurn.vtl");
+      model.put("template", "templates/PlayerOneTurn.vtl");
       return new ModelAndView (model, layout);
     }, new VelocityTemplateEngine());
 
@@ -78,7 +78,7 @@ public class App {
 
     get("/playerTwoReady", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/playerTwoReady.vtl");
+      model.put("template", "templates/PlayerTwoReady.vtl");
       return new ModelAndView (model, layout);
     }, new VelocityTemplateEngine());
 
@@ -97,7 +97,7 @@ public class App {
       model.put("p1score", p1score);
       model.put("p2score", p2score);
       model.put("playerTwo", playerTwoCardNames);
-      model.put("template", "templates/playerTwoTurn.vtl");
+      model.put("template", "templates/PlayerTwoTurn.vtl");
       return new ModelAndView (model, layout);
     }, new VelocityTemplateEngine());
 
@@ -130,7 +130,7 @@ public class App {
 
     get("/playerOneReady", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/playerOneReady.vtl");
+      model.put("template", "templates/PlayerOneReady.vtl");
       return new ModelAndView (model, layout);
     }, new VelocityTemplateEngine());
   }
